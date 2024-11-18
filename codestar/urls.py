@@ -22,6 +22,7 @@ from blog import views
 
 #Arrange paths in alphabetical order, with empty string path last:
 urlpatterns = [
+    path("about/", include("about.urls"), name="about-urls"),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('<slug:slug>/', views.post_detail, name='post_detail'),
